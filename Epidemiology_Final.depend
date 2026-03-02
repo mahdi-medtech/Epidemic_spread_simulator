@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1772379186 source:d:\coding practice\epidemiology\main.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-
