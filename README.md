@@ -60,3 +60,15 @@ By integrating stochastic algorithms, compartment modeling, and healthcare resou
 - Policy experimentation under constrained systems
 
 Developed as part of B.Tech Computer Science & Medical Engineering research exploration.
+
+How to Run
+
+1. Compile the C source file:
+
+   gcc Epidemic_Simulation.c -o simulation
+
+2. Execute the program:
+
+   ./simulation
+
+3. Use plot_graph.py to visualize the generated CSV output.
