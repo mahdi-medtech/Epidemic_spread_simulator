@@ -1,74 +1,120 @@
-Epidemiological Spread Simulation & Containment Optimization System
+# Epidemiological Spread Simulation & Containment Optimization System
 
-Overview
+## Overview
 
-The rapid emergence and global transmission of infectious diseases demand computational models capable of analyzing outbreak dynamics under realistic constraints.
+This project implements a stochastic, compartment-based SIRD (Susceptible–Infected–Recovered–Deceased) epidemiological model to simulate disease spread within a configurable population.
 
-This project implements a stochastic, compartment-based SIRD (Susceptible–Infected–Recovered–Deceased) epidemiological model developed in C to simulate disease propagation within a configurable population.
+It is designed to analyze outbreak dynamics under uncertainty while incorporating real-world constraints such as healthcare capacity and intervention strategies.
 
-Model Framework
+---
 
-The system utilizes:
+## Core Features
 
-- Stochastic state-transition modeling
-- Probabilistic transmission dynamics
-- Configurable epidemiological parameters
-- Resource-constrained healthcare modeling
+- Stochastic disease spread modeling  
+- SIRD compartmental framework  
+- Configurable epidemiological parameters:
+  - Contact rate  
+  - Infection probability  
+  - Recovery duration  
+  - Mortality rate  
 
-Each individual dynamically transitions between S, I, R, and D states based on:
+- Dynamic state transitions (S → I → R/D)  
+- Healthcare capacity constraints  
+- Multi-scenario simulation capability  
 
-- Contact rate
-- Infection probability
-- Recovery duration
-- Mortality rate
-- Hospital capacity constraints
+---
 
-This enables realistic simulation of uncertainty in epidemic progression.
+## Containment & Optimization
 
-Containment & Optimization Features
+The system includes intervention strategies such as:
 
-The system incorporates intervention strategies including:
+- Vaccination modeling  
+- Lockdown simulation  
+- Healthcare capacity limits  
 
-- Vaccination modeling
-- Lockdown enforcement
-- Healthcare capacity limits
+Mortality rates dynamically increase when infection levels exceed system capacity, enabling realistic overload scenario analysis.
 
-Mortality rates dynamically increase when active infections exceed hospital capacity, allowing evaluation of system overload scenarios.
+---
 
-Epidemiological Metrics Computed
+## Epidemiological Metrics
 
-- Basic reproduction number (R0)
-- Effective reproduction number (Rt)
-- Peak infection levels
-- Total affected population
-- Mortality outcomes
-- Multi-trial simulation analysis
+The model computes:
 
-Technical Implementation
+- Basic reproduction number (R₀)  
+- Effective reproduction number (Rₜ)  
+- Peak infection levels  
+- Total affected population  
+- Mortality outcomes  
+- Multi-trial statistical analysis  
 
-Language: C  
-Model Type: Stochastic SIRD Framework  
-Data Output: CSV for analytical processing  
-Visualization: Python-based plotting  
+---
 
-Research Significance
+## System Design
 
-By integrating stochastic algorithms, compartment modeling, and healthcare resource constraints, this system provides a structured computational platform for:
+The simulation is structured around:
 
-- Epidemic behavior analysis
-- Public health response evaluation
-- Policy experimentation under constrained systems
+- State-based modeling (SIRD transitions)  
+- Probabilistic decision-making  
+- Iterative time-step simulation  
+- CSV-based data output for analysis  
 
-Developed as part of B.Tech Computer Science & Medical Engineering research exploration.
+---
 
-How to Run
+## Technical Implementation
 
-1. Compile the C source file:
+- Language: C  
+- Model Type: Stochastic SIRD Framework  
+- Data Output: CSV  
+- Visualization: Python-based plotting  
 
-   gcc Epidemic_Simulation.c -o simulation
+---
 
-2. Execute the program:
+## Functional Highlights
 
+- Incorporates uncertainty through probabilistic transitions  
+- Models real-world constraints like healthcare overload  
+- Supports multiple simulation runs for comparative analysis  
+- Generates structured data for external visualization  
+
+---
+
+## How to Run
+
+1. Compile the program:
+   gcc simulation.c -o simulation
+
+2. Run:
    ./simulation
 
-3. Use plot_graph.py to visualize the generated CSV output.
+3. Analyze generated CSV output using Python or spreadsheet tools  
+
+---
+
+## Output
+
+- Simulation results in CSV format  
+- Metrics for infection spread and mortality  
+- Compatible with analytical tools for visualization  
+
+---
+
+## Future Enhancements
+
+- Real-time data integration  
+- Advanced predictive modeling  
+- Machine learning-based parameter tuning  
+- Interactive visualization dashboards  
+
+---
+
+## Note
+
+This project was developed as part of research-oriented exploration in epidemiological modeling, focusing on stochastic systems, computational simulation, and constraint-based analysis.
+
+---
+
+## Author
+
+**Mahdiya Rifqua M**  
+B.Tech Computer Science & Medical Engineering  
+(Specialization: Artificial Intelligence and Data Analysis)
